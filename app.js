@@ -18,8 +18,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Add the route handlers here:
 
+
+//route to home
 app.get('/', (req, res) => {
   res.render('index');
 });
+
+//route to beer
+app.get('/beers', (req, res) => {
+  res.render('beer');
+})
+
+//route to random beer
+app.get('/random-beer', (req, res) => {
+  res.render('randomBeer');
+})
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'));
