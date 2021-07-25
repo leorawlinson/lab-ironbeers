@@ -39,12 +39,26 @@ app.get('/beers', (req, res) => {
 //route to random beer
 app.get('/random-beer', (req, res) => {
   punkAPI
-  .getRandom()
-  .then(data => {
-   // console.log(data);
-    res.render('randomBeer', data);
-  })
-  .catch(err => console.error(err));
+    .getRandom()
+    .then(data => {
+      // console.log(data);
+      res.render('randomBeer', data);
+    })
+    .catch(err => console.error(err));
 });
+
+app.get('/beers/:id', (req, res) => {
+  punkAPI
+    .getBeer(id)
+    .then(data => {
+      res.render('beers', req.params.id);
+    })
+    .catch(err => console.error(err));
+});
+
+//app.get('/beers/:id', (request, response, next) => {
+//console.log(request.params);
+//response.sendFile(__dirname + "/views/home.html");
+//});
 
 app.listen(3000, () => console.log('🏃‍ on port 3000'));
