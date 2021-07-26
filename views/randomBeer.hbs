@@ -10,11 +10,12 @@
 </div> --}}
 <!--How do you add custom information to partials, that only needs to be displayed in one hbs file?-->
 
-  {{#each this}}
-    {{> beerpartials this}}
-    <p class='card-text'>{{this.food_pairing}}</p>
-    <p class='card-text'>{{this.brewers_tips}}</p>
+  {{#each beers}}
+    {{> beerPartial this extraInfo=../extraInfo}}
   {{/each}}
-   
+
+
+     
+    
 
 
