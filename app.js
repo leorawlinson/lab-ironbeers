@@ -30,8 +30,8 @@ app.get('/', (req, res) => {
 app.get('/beers', (req, res) => {
   punkAPI
     .getBeers()
-    .then(data => {
-      res.render('beers', data);
+    .then(beers => {
+      res.render('beers', { beers });
     })
     .catch(err => console.error(err));
 });
@@ -40,18 +40,19 @@ app.get('/beers', (req, res) => {
 app.get('/random-beer', (req, res) => {
   punkAPI
     .getRandom()
-    .then(data => {
+    .then(beers => {
       // console.log(data);
-      res.render('randomBeer', data);
+      res.render('randomBeer', { beers: beers, extraInfo: true });
     })
     .catch(err => console.error(err));
 });
 
 app.get('/beers/:id', (req, res) => {
+  const { id } = req.params;
   punkAPI
     .getBeer(id)
-    .then(data => {
-      res.render('beers', req.params.id);
+    .then(beers => {
+      res.render('oneBeer', { beers, moreInfo: true });
     })
     .catch(err => console.error(err));
 });
