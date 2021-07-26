@@ -1,8 +1,7 @@
-
   <div class="container">
      <div class="row">
       {{#each beers}} 
-        {{> beerPartial this}}
+        {{> beerPartial this moreInfo=../moreInfo}}
       {{/each}}
      </div>
   </div>
