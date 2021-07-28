@@ -16,3 +16,8 @@ font-family: Arial, Helvetica, sans-serif;
 p {
   color: blue;
 }
+#beer-img {
+  width: 60px;
+  height: auto;
+  margin: 0 auto;
+}
