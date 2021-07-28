@@ -1,6 +1,8 @@
-    <div id="one-beer-div">
-      {{#each beers}} 
+    <div class="container" id="one-beer-div">
+      <div class="row">
+        {{#each beers}} 
         {{> beerPartial this moreInfo=../moreInfo}}
       {{/each}}
+      </div> 
     </div>
      

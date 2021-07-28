@@ -1,14 +1,3 @@
-{{!-- <div>
-  {{#each this}}
-    <h2>{{name}}</h2>
-    <img src='{{image_url}}' alt='' width='96' />
-    <h3>{{tagline}}</h3>
-    <p>{{description}}</p>
-    <p>{{food_pairing}}</p>
-    <p>{{brewers_tips}}</p>
-  {{/each}}
-</div> -->
-<!--How do you add custom information to partials, that only needs to be displayed in one hbs file?-->
 
   {{#each beers}}
     {{> beerPartial this extraInfo=../extraInfo}}

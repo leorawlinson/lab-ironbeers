@@ -1,5 +1,5 @@
 <div class='card col-6 col-sm-4 col-md-3'>
-  <img src='{{this.image_url}}' id="beer-img" class='card-img-top' alt='...'/>
+  <img src='{{this.image_url}}' id='beer-img' class='card-img-top' alt='...' />
   <div class='card-body'>
     <h5 class='card-title'>{{this.name}}</h5>
     <p class='card-text'>{{this.tagline}}</p>
@@ -11,14 +11,19 @@
     {{#if moreInfo}}
       <p class='card-text'><strong>Food pairing:</strong>
         {{this.food_pairing}}</p>
-      <p class='card-text'>{{this.brewers_tips}}</p>
-      <p class='card-text'>{{this.first_brewed}}</p>
-      <p class='card-text'>{{this.abv}}</p>
-      <p class='card-text'>{{this.ibu}}</p>
-      <p class='card-text'>{{this.attenuation_level}}</p>
-      <p class='card-text'>{{this.ingredients.yeast}}</p>
-      <p class='card-text'>{{{this.contributed_by}}}</p>
+      <p class='card-text'><strong>Brewer tips:
+        </strong>{{this.brewers_tips}}</p>
+      <p class='card-text'><strong>First brewed:
+        </strong>{{this.first_brewed}}</p>
+      <p class='card-text'><strong>ABV: </strong>{{this.abv}}</p>
+      <p class='card-text'><strong>IBU: </strong>{{this.ibu}}</p>
+      <p class='card-text'><strong>Attenuation level:
+        </strong>{{this.attenuation_level}}</p>
+      <p class='card-text'><strong>Ingredients yeast:
+        </strong>{{this.ingredients.yeast}}</p>
+      <p class='card-text'><strong>Contributed by:
+        </strong>{{{this.contributed_by}}}</p>
     {{/if}}
-    <a href='/beers/{{id}}' class='btn btn-primary'>Go somewhere</a>
+    <a href='/beers/{{id}}' class='btn btn-primary'>More info</a>
   </div>
 </div>
